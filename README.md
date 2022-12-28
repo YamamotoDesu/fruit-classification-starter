@@ -24,3 +24,6 @@ https://www.kaggle.com/datasets/moltean/fruits?resource=download
 <img width="1316" alt="スクリーンショット_2022_12_28_10_16" src="https://user-images.githubusercontent.com/47273077/209742533-b32896a5-6eca-4b7a-967d-88bdebc57b47.png">
 
 <img width="1422" alt="スクリーンショット_2022_12_28_10_17" src="https://user-images.githubusercontent.com/47273077/209742652-f24157f4-d507-47c2-a542-58e136e692bf.png">
+
+## Export Model
+<img width="1361" alt="スクリーンショット_2022_12_28_11_00" src="https://user-images.githubusercontent.com/47273077/209745626-4e92311f-e5a3-4099-a3ac-29a20ffcd073.png">
