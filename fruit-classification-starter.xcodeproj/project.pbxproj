@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BCE65AF295BE56D00874B25 /* FruitClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE65AE295BE56D00874B25 /* FruitClassifier 1.mlmodel */; };
+		7BCE65B1295BE5BD00874B25 /* VisionClassfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE65B0295BE5BD00874B25 /* VisionClassfier.swift */; };
 		8D7A891523ECBACB00E3745E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A891423ECBACB00E3745E /* AppDelegate.swift */; };
 		8D7A891723ECBACB00E3745E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A891623ECBACB00E3745E /* SceneDelegate.swift */; };
 		8D7A891923ECBACB00E3745E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A891823ECBACB00E3745E /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7BCE65AE295BE56D00874B25 /* FruitClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FruitClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		7BCE65B0295BE5BD00874B25 /* VisionClassfier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionClassfier.swift; sourceTree = "<group>"; };
 		8D7A891123ECBACB00E3745E /* fruit-classification-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fruit-classification-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7A891423ECBACB00E3745E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D7A891623ECBACB00E3745E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		8D7A891323ECBACB00E3745E /* fruit-classification-starter */ = {
 			isa = PBXGroup;
 			children = (
+				7BCE65AE295BE56D00874B25 /* FruitClassifier 1.mlmodel */,
 				8D7A891423ECBACB00E3745E /* AppDelegate.swift */,
 				8D7A891623ECBACB00E3745E /* SceneDelegate.swift */,
 				8D7A891823ECBACB00E3745E /* ContentView.swift */,
@@ -66,6 +71,7 @@
 				8D7A892223ECBACD00E3745E /* Info.plist */,
 				8D7A891C23ECBACD00E3745E /* Preview Content */,
 				8D7A892823ECBAF100E3745E /* ImagePicker.swift */,
+				7BCE65B0295BE5BD00874B25 /* VisionClassfier.swift */,
 			);
 			path = "fruit-classification-starter";
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			files = (
 				8D7A891523ECBACB00E3745E /* AppDelegate.swift in Sources */,
 				8D7A892923ECBAF100E3745E /* ImagePicker.swift in Sources */,
+				7BCE65B1295BE5BD00874B25 /* VisionClassfier.swift in Sources */,
+				7BCE65AF295BE56D00874B25 /* FruitClassifier 1.mlmodel in Sources */,
 				8D7A891723ECBACB00E3745E /* SceneDelegate.swift in Sources */,
 				8D7A891923ECBACB00E3745E /* ContentView.swift in Sources */,
 			);
