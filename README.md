@@ -27,3 +27,85 @@ https://www.kaggle.com/datasets/moltean/fruits?resource=download
 
 ## Export Model
 <img width="1361" alt="スクリーンショット_2022_12_28_11_00" src="https://user-images.githubusercontent.com/47273077/209745626-4e92311f-e5a3-4099-a3ac-29a20ffcd073.png">
+
+## Implement Source code
+
+ViewController
+```swift
+    private let classifier = VisionClassfier(mlModel: FruitClassifier_1().model)
+
+      Button("Classify") {
+
+      if let img = self.image {
+          self.classifier?.classify(img) { result in
+              self.classificationLabel = result
+          }
+      }
+
+  }.padding()
+      .foregroundColor(Color.white)
+      .background(Color.green)
+      .cornerRadius(10)
+```
+                    
+
+VisionClassfier
+```swift
+import Foundation
+import CoreML
+import Vision
+import UIKit
+
+class VisionClassfier {
+    
+    private let model: VNCoreMLModel
+    private var completion: (String) -> Void = { _ in }
+    
+    private lazy var request: [VNCoreMLRequest] = {
+        
+        let request = VNCoreMLRequest(model: model) { (request, error) in
+            guard let results = request.results as? [VNClassificationObservation] else {
+                return
+            }
+            
+            if !results.isEmpty {
+                if let result = results.first {
+                    self.completion(result.identifier)
+                }
+            }
+        }
+        
+        request.imageCropAndScaleOption = .centerCrop
+        return [request]
+    }()
+    
+    init?(mlModel: MLModel) {
+        if let model = try? VNCoreMLModel(for: mlModel) {
+            self.model = model
+        } else {
+            return nil
+        }
+    }
+    
+    func classify(_ image: UIImage, completion: @escaping (String) -> Void) {
+        
+        self.completion = completion
+        
+        DispatchQueue.global().async {
+            
+            guard let cgImage = image.cgImage else {
+                return
+            }
+            
+            let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+            
+            do {
+                try handler.perform(self.request)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+}
+
+```
