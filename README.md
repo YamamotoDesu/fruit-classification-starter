@@ -1,5 +1,8 @@
 # fruit-classification-starter
 
+<img width="300" alt="スクリーンショット 2022-12-30 11 17 45" src="https://user-images.githubusercontent.com/47273077/210028043-b4ea69ae-e3c6-4aa1-9ec0-f5e1ea790d9c.gif">
+
+
 ## Download Fruit Dataset
 https://www.kaggle.com/datasets/moltean/fruits?resource=download
 
